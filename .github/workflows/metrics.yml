@@ -1,0 +1,34 @@
+name: Metrics
+on:
+  # 毎日 JST 3:00（UTC 18:00）に自動実行
+  schedule:
+    - cron: "0 18 * * *"
+  # 手動実行も可能
+  workflow_dispatch:
+  # mainへのpushでも実行（初回確認用）
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Metrics
+        uses: lowlighter/metrics@latest
+        with:
+          # プライベートの活動量も含めるためPAT（repoスコープ）を使用
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: kakkydon
+          filename: metrics.svg
+          config_timezone: Asia/Tokyo
+
+          # ヘッダー＋直近アクティビティ
+          base: header, activity
+
+          # コミット活動のカレンダーグラフ（1年分）
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
