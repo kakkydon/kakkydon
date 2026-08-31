@@ -13,7 +13,7 @@
 ## 📊 Activity
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kakkydon&theme=tokyo-night&hide_border=true&area=true" alt="Activity Graph" width="90%" />
+  <img src="./metrics.svg" alt="Metrics" width="90%" />
 </div>
 
 <div align="center">
