@@ -15,7 +15,3 @@
 <div align="center">
   <img src="./metrics.svg" alt="Metrics" width="90%" />
 </div>
-
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=kakkydon&theme=tokyonight&hide_border=true&locale=ja" alt="GitHub Streak" height="165" />
-</div>
