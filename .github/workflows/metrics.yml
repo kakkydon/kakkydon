@@ -26,8 +26,8 @@ jobs:
           filename: metrics.svg
           config_timezone: Asia/Tokyo
 
-          # ヘッダー＋直近アクティビティ
-          base: header, activity
+          # ヘッダーのみ（PR/Issue 0件の統計行は非表示）
+          base: header
 
           # コミット活動のカレンダーグラフ（1年分）
           plugin_isocalendar: yes
